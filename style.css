@@ -1,0 +1,503 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  /* background-color: dimgray; */
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+
+  /* background: linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  ); */
+}
+
+.banner {
+  display: grid;
+  grid-template-areas:
+    "img img img  ad1"
+    "img img img  ad2";
+
+  padding-bottom: 0.2rem;
+  grid-gap: 0.5rem;
+}
+
+.banner__img {
+  grid-area: img;
+  background: url(./images/fast-food.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  min-height: 93vh;
+  max-width: 100%;
+  background-position: center;
+}
+
+.banner__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__img h1,
+.banner__img h2 {
+  background-color: rgb(102, 146, 232);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 4rem;
+  margin-left: 10rem;
+  margin-top: 0.3rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.banner section {
+  text-align: center;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
+.banner section h1 {
+  font-size: 5rem;
+}
+
+.banner section h4 {
+  font-size: 1.5rem;
+}
+
+.banner__ad1 {
+  grid-area: ad1;
+  border-radius: 0.3rem;
+  background: linear-gradient(
+    90deg,
+    hsla(10, 89%, 70%, 1) 0%,
+    hsla(350, 100%, 69%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(10, 89%, 70%, 1) 0%,
+    hsla(350, 100%, 69%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(10, 89%, 70%, 1) 0%,
+    hsla(350, 100%, 69%, 1) 100%
+  );
+}
+
+.banner__ad1:hover {
+  background: linear-gradient(
+    90deg,
+    hsla(350, 100%, 69%, 1) 100%,
+    hsla(10, 89%, 70%, 1) 0%
+  );
+}
+
+.banner__ad2 {
+  grid-area: ad2;
+  border-radius: 0.3rem;
+
+  background: linear-gradient(
+    90deg,
+    hsla(189, 100%, 50%, 1) 0%,
+    hsla(248, 16%, 61%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(189, 100%, 50%, 1) 0%,
+    hsla(248, 16%, 61%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(189, 100%, 50%, 1) 0%,
+    hsla(248, 16%, 61%, 1) 100%
+  );
+}
+
+.banner__ad2:hover {
+  background: linear-gradient(
+    90deg,
+    hsla(248, 16%, 61%, 1) 100%,
+    hsla(189, 100%, 50%, 1) 0%
+  );
+}
+
+.nav {
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: whitesmoke;
+}
+
+.nav ul > li {
+  background-color: cadetblue;
+  background-color: rgb(145, 192, 194);
+  background-color: rgb(102, 146, 232);
+  padding: 0.8rem;
+  flex: 1;
+  text-align: center;
+}
+
+.nav ul li > a:active,
+.footer__nav ul li > a:active {
+  color: whitesmoke;
+}
+
+.nav ul li > a:hover {
+  letter-spacing: 0.2rem;
+  color: whitesmoke;
+}
+
+/* Menu */
+.menu {
+  padding: 1rem;
+  /* background-color: rgb(223, 233, 240);
+  background-color: #a9c9ff;
+  background-color: rgb(223, 233, 240);
+
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+  background-color: rgb(223, 233, 240);
+  background-color: red; */
+
+  background-color: rgb(223, 219, 219);
+  background-color: rgb(236, 234, 234);
+}
+
+.menu__heading {
+  text-align: center;
+  padding: 1rem;
+  font-family: cursive;
+  font-size: 1.4rem;
+}
+
+.menu__images {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  margin: 0 0.3rem;
+}
+
+.menu__img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 0.5px black solid;
+}
+
+.menu__img:hover {
+  border: 2px black solid;
+}
+
+/* Top Seller */
+
+.topSeller {
+  background-color: beige;
+  background-color: antiquewhite;
+  transform: translateX(0);
+}
+
+.topSeller {
+  padding: 1rem;
+  background-color: rgb(185, 166, 203);
+  background-color: rgb(117, 90, 142);
+}
+
+.topSeller__card__section {
+  display: flex;
+  gap: 0.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  animation: cardAnimate 14s linear alternate-reverse 1s infinite;
+}
+
+.topSeller__heading {
+  padding: 1rem;
+  text-align: center;
+  color: black;
+}
+
+.topSeller__card {
+  /* background-color: rgb(102, 78, 151);
+  background-image: linear-gradient(135deg, #3b2667 10%, #bc78ec 100%);
+  background-image: radial-gradient(135deg, #6b5b8d 10%, #bc78ec 100%);
+  background-image: radial-gradient(135deg, #aba1c0 10%, #bc78ec 100%); */
+  background-color: #e0d1eb;
+
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 2.5rem 1.5rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topSeller__card h3 {
+  color: aliceblue;
+  color: rgb(23, 23, 24);
+  color: rgb(63, 63, 195);
+
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+@keyframes cardAnimate {
+  0%,
+  80% {
+    transform: translateX(calc(-82%));
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bestSeller__icons {
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+}
+
+.burger__icon {
+  width: 4rem;
+}
+
+.chickenfry__icon {
+  width: 4.5rem;
+}
+
+.jelly__icon {
+  width: 4rem;
+}
+
+.nugget__icon {
+  width: 5rem;
+}
+
+.hotdog__icon {
+  width: 4rem;
+}
+
+.fries__icon {
+  width: 4rem;
+}
+
+/* Footer */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-image: linear-gradient(135deg, #ee9ae5 10%, #5961f9 100%);
+}
+
+.footer__address {
+  padding: 1rem 3rem;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+}
+.footer__logo {
+  margin: auto;
+}
+.footer__logo img {
+  width: 8rem;
+}
+.footer__links {
+  padding: 1rem;
+}
+
+.footer__nav ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.footer__nav ul a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.footer__nav ul a:hover {
+  letter-spacing: 0.3rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .banner {
+    grid-template-areas:
+      "img img img img"
+      "img img img img"
+      "ad1 ad1 ad2 ad2";
+
+    grid-gap: 0.3rem;
+  }
+
+  .banner__img {
+    min-height: 65vh;
+  }
+
+  .banner__img h1,
+  .banner__img h2 {
+    margin-left: 6rem;
+  }
+
+  .banner__ad1,
+  .banner__ad2 {
+    padding: 3.5rem;
+  }
+
+  .banner section h1 {
+    font-size: 3rem;
+  }
+  .banner section h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner__img {
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .banner__ad1,
+  .banner__ad2 {
+    padding: 2.5rem;
+  }
+
+  .banner__img {
+    min-height: 70vh;
+  }
+
+  .banner__img h1,
+  .banner__img h2 {
+    margin-left: 1rem;
+    width: fit-content;
+    font-size: 3rem;
+  }
+
+  .nav ul a {
+    font-size: 0.9rem;
+    letter-spacing: 0;
+  }
+
+  .nav ul li > a:hover {
+    letter-spacing: 1px;
+  }
+
+  .footer__address {
+    padding: 1rem 1rem;
+    line-height: 1.8rem;
+    font-size: 1rem;
+    letter-spacing: 0rem;
+  }
+
+  .menu__images {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    margin: 0 0.3rem;
+  }
+
+  .topSeller__card h1 {
+    font-size: 1.3rem;
+  }
+
+  .topSeller__card h3 {
+    font-size: 1rem;
+  }
+
+  .footer {
+    place-items: center;
+  }
+  .footer__logo img {
+    width: 6rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner__img h1,
+  .banner__img h2 {
+    font-size: 2rem;
+  }
+
+  .banner__img {
+    min-height: 72vh;
+  }
+
+  .banner section h1 {
+    font-size: 2rem;
+  }
+  .banner section h4 {
+    font-size: 1rem;
+  }
+
+  .nav ul a {
+    font-size: 0.7rem;
+  }
+
+  .topSeller__card h1 {
+    font-size: 1rem;
+  }
+
+  .topSeller__card h3 {
+    font-size: 0.8rem;
+  }
+
+  .topSeller__card {
+    padding: 3rem 1.5rem;
+  }
+}
